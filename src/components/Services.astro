@@ -1,0 +1,101 @@
+---
+import {
+  Sofa,
+  Sun,
+  Layers,
+  DoorOpen,
+  ShieldCheck,
+  Square,
+  Wrench,
+  Blinds,
+  MessageCircle,
+} from "lucide-astro";
+
+const services = [
+  {
+    icon: Sofa,
+    title: "Möbelbau",
+    text: "Individuelle Möbel nach Maß – vom Einbauschrank bis zum Sideboard.",
+  },
+  {
+    icon: Sun,
+    title: "Terrassen & Balkon",
+    text: "Holzarbeiten für Terrasse und Balkon, wetterfest und langlebig.",
+  },
+  {
+    icon: Layers,
+    title: "Verkleidungen",
+    text: "Wand- und Deckenverkleidungen in Holz, sauber gefertigt und montiert.",
+  },
+  {
+    icon: DoorOpen,
+    title: "Türen & Fenster",
+    text: "Kunststoff- und Holzfenster, Innen- und Haustüren nach Ihren Maßen.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Einbruchsicherheit",
+    text: "Nachrüstung und sichere Beschläge für Fenster und Türen.",
+  },
+  {
+    icon: Square,
+    title: "Böden & Decken",
+    text: "Bodenarbeiten, Decken­verkleidungen und Ausbau von Räumen.",
+  },
+  {
+    icon: Wrench,
+    title: "(Klein-)Reparaturen",
+    text: "Schnelle, zuverlässige Reparaturen rund um Haus und Eigentum.",
+  },
+  {
+    icon: Blinds,
+    title: "Rolladenbau",
+    text: "Rolläden – Neubau, Austausch und Instandsetzung aus einer Hand.",
+  },
+  {
+    icon: MessageCircle,
+    title: "Beratung",
+    text: "Persönliche Beratung in unserer Werkstatt – ehrlich und fundiert.",
+  },
+];
+---
+
+<section id="leistungen" class="section bg-cream">
+  <div class="container-page">
+    <div class="max-w-2xl">
+      <span class="eyebrow">
+        <span class="inline-block w-6 h-px bg-wood"></span>
+        Leistungen
+      </span>
+      <h2 class="mt-5 text-4xl sm:text-5xl">
+        Schreinerarbeiten für Haus<br /> und Eigentum.
+      </h2>
+      <p class="mt-5 text-muted text-lg leading-relaxed">
+        Vom individuellen Möbelbau über Fenster und Türen bis zu kleineren
+        Reparaturen – wir begleiten Ihr Projekt persönlich, von der Beratung
+        bis zur Montage.
+      </p>
+    </div>
+
+    <ul
+      class="mt-14 grid gap-px sm:grid-cols-2 lg:grid-cols-3 bg-cream-200 rounded-2xl overflow-hidden border border-cream-200"
+    >
+      {
+        services.map(({ icon: Icon, title, text }) => (
+          <li class="group bg-cream p-8 transition-colors duration-200 hover:bg-cream-50">
+            <span class="grid place-items-center w-12 h-12 rounded-xl bg-cream-100 text-wood transition-colors group-hover:bg-walnut group-hover:text-cream">
+              <Icon class="w-6 h-6" />
+            </span>
+            <h3 class="mt-8 text-2xl">{title}</h3>
+            <p class="mt-3 text-sm text-muted leading-relaxed">{text}</p>
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="mt-10 text-sm text-muted">
+      Sie benötigen etwas, das hier nicht aufgeführt ist? Sprechen Sie uns an –
+      in der Regel finden wir eine Lösung.
+    </p>
+  </div>
+</section>

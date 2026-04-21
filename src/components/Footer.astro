@@ -1,0 +1,87 @@
+---
+import { MapPin, Phone, Mail } from "lucide-astro";
+
+const year = new Date().getFullYear();
+
+const legal = [
+  { label: "Kontakt", href: "#kontakt" },
+  { label: "Impressum", href: "/impressum" },
+  { label: "Datenschutzerklärung", href: "/datenschutz" },
+  { label: "Informationspflicht", href: "/informationspflicht" },
+];
+---
+
+<footer class="bg-walnut text-cream/80">
+  <div class="container-page py-14 grid gap-10 md:grid-cols-3">
+    <div class="max-w-sm">
+      <div class="flex items-center gap-3">
+        <span
+          class="grid place-items-center w-10 h-10 rounded-full bg-cream text-walnut font-serif text-lg"
+          >R</span
+        >
+        <span class="leading-tight">
+          <span class="block font-serif text-lg text-cream">Schreinerei Markus Rosch</span>
+          <span class="block text-[10px] tracking-[0.18em] uppercase text-cream/60"
+            >Bau- und Möbelschreinerei</span
+          >
+        </span>
+      </div>
+      <p class="mt-5 text-sm leading-relaxed">
+        Familienbetrieb seit 1960. Ihr erfahrener Partner für Schreinerarbeiten
+        in Duisburg-Neudorf und Umgebung.
+      </p>
+    </div>
+
+    <div>
+      <h4 class="text-cream text-sm font-medium uppercase tracking-[0.18em]">
+        Kontakt
+      </h4>
+      <ul class="mt-5 space-y-3 text-sm">
+        <li class="flex items-start gap-3">
+          <MapPin class="w-4 h-4 mt-0.5 shrink-0 text-oak" />
+          <span>Blumenstr. 73<br />47057 Duisburg</span>
+        </li>
+        <li class="flex items-center gap-3">
+          <Phone class="w-4 h-4 shrink-0 text-oak" />
+          <a href="tel:+4920337118" class="hover:text-cream">0203 37 01 18</a>
+        </li>
+        <li class="flex items-center gap-3">
+          <Mail class="w-4 h-4 shrink-0 text-oak" />
+          <a
+            href="mailto:schreinerei-rosch@t-online.de"
+            class="hover:text-cream break-all"
+          >
+            schreinerei-rosch@t-online.de
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="text-cream text-sm font-medium uppercase tracking-[0.18em]">
+        Öffnungszeiten
+      </h4>
+      <p class="mt-5 text-sm leading-relaxed">
+        Mo.&nbsp;–&nbsp;Do.&nbsp;&nbsp;07:30&nbsp;–&nbsp;16:15 Uhr<br />
+        Fr.&nbsp;&nbsp;07:30&nbsp;–&nbsp;13:15 Uhr
+      </p>
+    </div>
+  </div>
+
+  <div class="border-t border-cream/10">
+    <div
+      class="container-page py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-cream/60"
+    >
+      <p>© {year} Schreinerei Markus Rosch · Alle Rechte vorbehalten.</p>
+      <nav class="flex flex-wrap gap-x-6 gap-y-2 justify-center">
+        {
+          legal.map((item) => (
+            <a href={item.href} class="hover:text-cream">
+              {item.label}
+            </a>
+          ))
+        }
+      </nav>
+    </div>
+  </div>
+</footer>

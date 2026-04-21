@@ -1,17 +1,17 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import Services from "../components/Services.astro";
+import AboutTrust from "../components/AboutTrust.astro";
+import CTASection from "../components/CTASection.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="Schreinerei Markus Rosch · Bau- und Möbelschreinerei in Duisburg-Neudorf"
+  description="Familienbetrieb seit 1960. Möbelbau, Türen & Fenster, Innenausbau, Rolladenbau und mehr – persönlich und erfahren in Duisburg-Neudorf."
+>
+  <Hero />
+  <Services />
+  <AboutTrust />
+  <CTASection />
+</BaseLayout>

@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #faf7f2;
+  --color-cream-50: #fdfbf7;
+  --color-cream-100: #f5efe3;
+  --color-cream-200: #ebe1cd;
+  --color-sand: #e6d9bf;
+  --color-oak: #c9a77a;
+  --color-wood: #8a5a2b;
+  --color-wood-dark: #5a3a1e;
+  --color-walnut: #2d1f13;
+  --color-walnut-soft: #3a2a1b;
+  --color-ink: #1a120a;
+  --color-forest: #3e5a3a;
+  --color-muted: #7a6a58;
+
+  --font-serif: "Fraunces", "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-soft: 0 1px 2px rgba(45, 31, 19, 0.04), 0 8px 24px rgba(45, 31, 19, 0.06);
+  --shadow-card: 0 1px 2px rgba(45, 31, 19, 0.05), 0 12px 32px rgba(45, 31, 19, 0.08);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background-color: var(--color-cream);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--color-walnut);
+  }
+
+  ::selection {
+    background-color: var(--color-oak);
+    color: var(--color-walnut);
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-6 sm:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all duration-200;
+  }
+
+  .btn-primary {
+    background-color: var(--color-walnut);
+    color: var(--color-cream);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-walnut-soft);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    border: 1px solid var(--color-walnut);
+    color: var(--color-walnut);
+  }
+  .btn-secondary:hover {
+    background-color: var(--color-walnut);
+    color: var(--color-cream);
+  }
+
+  .btn-ghost {
+    color: var(--color-walnut);
+  }
+  .btn-ghost:hover {
+    color: var(--color-wood);
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em];
+    color: var(--color-wood);
+  }
+
+  .section {
+    @apply py-20 sm:py-28;
+  }
+}

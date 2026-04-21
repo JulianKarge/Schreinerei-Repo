@@ -1,0 +1,107 @@
+---
+import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-astro";
+---
+
+<section id="kontakt" class="section">
+  <div class="container-page">
+    <div
+      class="relative overflow-hidden rounded-3xl shadow-[var(--shadow-card)] text-cream"
+      style="background: radial-gradient(800px 400px at 20% 0%, rgba(201,167,122,0.35), transparent 60%), linear-gradient(135deg, #2d1f13 0%, #3a2a1b 60%, #5a3a1e 100%);"
+    >
+      <div
+        class="absolute inset-0 opacity-15 mix-blend-overlay pointer-events-none"
+        style="background-image: repeating-linear-gradient(85deg, rgba(255,255,255,0.06) 0 1px, transparent 1px 12px);"
+        aria-hidden="true"
+      >
+      </div>
+
+      <div class="relative grid lg:grid-cols-5 gap-10 p-8 sm:p-14">
+        <div class="lg:col-span-3">
+          <span class="eyebrow !text-oak">
+            <span class="inline-block w-6 h-px bg-oak"></span>
+            Interesse?
+          </span>
+          <h2 class="mt-5 font-serif text-4xl sm:text-5xl text-cream leading-[1.1]">
+            Rufen Sie uns an.<br />
+            <span class="text-oak">0203 37 01 18</span>
+          </h2>
+          <p class="mt-6 max-w-lg text-cream/75 text-lg leading-relaxed">
+            Wir stehen Ihnen gerne persönlich in unserer Werkstatt und
+            telefonisch zur Verfügung. Vereinbaren Sie telefonisch einen
+            Besichtigungstermin für eine Beratung – wir freuen uns auf Ihre
+            Kontaktaufnahme.
+          </p>
+
+          <div class="mt-9 flex flex-wrap gap-3">
+            <a
+              href="tel:+4920337118"
+              class="btn rounded-full bg-cream text-walnut hover:bg-cream-100"
+            >
+              <Phone class="w-4 h-4" />
+              Jetzt anrufen
+            </a>
+            <a
+              href="mailto:schreinerei-rosch@t-online.de"
+              class="btn rounded-full border border-cream/30 text-cream hover:bg-cream/10"
+            >
+              <Mail class="w-4 h-4" />
+              E-Mail schreiben
+              <ArrowRight class="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+
+        <ul class="lg:col-span-2 grid gap-5 content-start lg:border-l lg:border-cream/10 lg:pl-10">
+          <li class="flex items-start gap-4">
+            <span class="grid place-items-center w-10 h-10 rounded-full bg-cream/10 text-oak shrink-0">
+              <MapPin class="w-5 h-5" />
+            </span>
+            <div>
+              <p class="text-xs uppercase tracking-[0.16em] text-cream/60">Adresse</p>
+              <p class="mt-1 text-cream">Blumenstr. 73<br />47057 Duisburg</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="grid place-items-center w-10 h-10 rounded-full bg-cream/10 text-oak shrink-0">
+              <Phone class="w-5 h-5" />
+            </span>
+            <div>
+              <p class="text-xs uppercase tracking-[0.16em] text-cream/60">Telefon</p>
+              <a href="tel:+4920337118" class="mt-1 block text-cream hover:text-oak">
+                0203 37 01 18
+              </a>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="grid place-items-center w-10 h-10 rounded-full bg-cream/10 text-oak shrink-0">
+              <Mail class="w-5 h-5" />
+            </span>
+            <div>
+              <p class="text-xs uppercase tracking-[0.16em] text-cream/60">E-Mail</p>
+              <a
+                href="mailto:schreinerei-rosch@t-online.de"
+                class="mt-1 block text-cream hover:text-oak break-all"
+              >
+                schreinerei-rosch@t-online.de
+              </a>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="grid place-items-center w-10 h-10 rounded-full bg-cream/10 text-oak shrink-0">
+              <Clock class="w-5 h-5" />
+            </span>
+            <div>
+              <p class="text-xs uppercase tracking-[0.16em] text-cream/60">
+                Öffnungszeiten
+              </p>
+              <p class="mt-1 text-cream leading-relaxed">
+                Mo.&nbsp;–&nbsp;Do.&nbsp;&nbsp;07:30&nbsp;–&nbsp;16:15 Uhr<br />
+                Fr.&nbsp;&nbsp;07:30&nbsp;–&nbsp;13:15 Uhr
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
